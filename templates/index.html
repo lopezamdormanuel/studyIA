@@ -2,9 +2,66 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyIA</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-</body>
-</html>
+<header class="navbar">
+
+    <div class="logo">
+        🤖 <span>StudyIA</span>
+    </div>
+
+    <div class="menu">
+        <button id="chatBtn">💬 Chat</button>
+        <button id="studyBtn">📚 Estudio</button>
+        <button id="imageBtn">🖼️ Imágenes</button>
+        <button id="voiceBtn">🎤 Voz</button>
+        <button id="settingsBtn">⚙️ Ajustes</button>
+    </div>
+
+</header>
+
+<div class="container">
+
+    <div id="chat-box"></div>
+
+    <div class="quick-buttons">
+
+        <button onclick="usarModo('Resume este texto')">
+            📄 Resumen
+        </button>
+
+        <button onclick="usarModo('Haz un examen tipo test')">
+            ❓ Test
+        </button>
+
+        <button onclick="usarModo('Explícalo fácilmente')">
+            🧠 Explicar
+        </button>
+
+        <button onclick="usarModo('Crea flashcards')">
+            📚 Flashcards
+        </button>
+
+    </div>
+
+    <div class="input-area">
+
+        <input
+            id="userInput"
+            type="text"
+            placeholder="Escribe aquí..."
+        >
+
+        <button id="sendBtn">
+            Enviar
+        </button>
+
+    </div>
+
+</div>
