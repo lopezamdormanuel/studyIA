@@ -1,1 +1,6 @@
-
+Flask
+python-dotenv
+groq
+gunicorn
+requests
+Pillow
